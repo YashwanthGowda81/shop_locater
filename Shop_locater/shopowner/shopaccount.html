@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Account - ShopTrio</title>
+    <link rel="stylesheet" href="shopaccount.css">
+    <link rel="stylesheet" href="../modal.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header class="header">
+        <div class="container">
+            <h1 class="logo">My Account</h1>
+            <button id="back-btn" class="btn btn-outline">← Back</button>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="container">
+            <div class="account-container">
+                <div class="account-card">
+                    <div class="account-header">
+                        <h2>Profile Information</h2>
+                        <p>Update your personal details</p>
+                    </div>
+
+                    <form id="account-form" class="account-form">
+                        <div class="form-group">
+                            <label for="full_name">Full Name *</label>
+                            <input type="text" id="full_name" name="full_name" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" disabled>
+                            <div class="field-note">Email cannot be changed</div>
+                        </div>
+
+                        <div class="form-actions">
+                            <button type="submit" class="btn btn-primary">Save Changes</button>
+                            <button type="button" id="cancel-btn" class="btn btn-outline">Cancel</button>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="stats-card">
+                    <h3>Business Overview</h3>
+                    <div class="stats-grid">
+                        <div class="stat-item">
+                            <div class="stat-number" id="total-shops">0</div>
+                            <div class="stat-label">Total Shops</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number" id="total-items">0</div>
+                            <div class="stat-label">Total Items</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p id="modal-message"></p>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script type="module" src="shopaccount.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How LocalShop Works</title>
+    <!-- <link rel="stylesheet" href="customer-dashboard.css"> -->
+    <link rel="stylesheet" href="overview.css"> </head>
+<body>
+    <header class="header">
+        <div class="header-left">
+            <a href="index.html" class="nav-link">&larr; Back to Home</a>
+            <h1>How LocalShop Works</h1>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <section class="overview-card">
+            <h2>The "Big Idea"</h2>
+            <p>This project, "LocalShop," is a full-stack, dual-sided web application. It solves the problem for both customers (who can't find items) and shop owners (who can't easily show their inventory).</p>
+
+            <h3>1. The Private Shop Owner App (The "Admin" Side)</h3>
+            <p>This is a secure area where shop owners log in to manage their business.</p>
+            <ul>
+                <li><strong>Secure Login:</strong> Owners register and log in. An owner can <strong>only</strong> see their own shops and data.</li>
+                <li><strong>Multi-Shop Management:</strong> An owner can create, edit, and delete multiple shop profiles.</li>
+                <li><strong>Item Management:</strong> For each shop, the owner can add items, including photos, descriptions, and specific quantities (e.g., "10 kg", "5 units").</li>
+                <li><strong>Location:</strong> Owners can set their shop's exact location on a map using their current GPS or by dragging a pin.</li>
+            </ul>
+
+            <h3>2. The Public Customer App (The "Search" Side)</h3>
+            <p>This is the public-facing site where any customer can find items without needing to log in.</p>
+            <ul>
+                <li><strong>Public Search:</strong> A customer can search for any item (e.g., "Apples").</li>
+                <li><strong>Database Search:</strong> The app searches the database for all items matching that name that are in stock (units > 0).</li>
+                <li><strong>List & Map View:</strong> The results are shown in two ways:
+                    <ol>
+                        <li>A scrollable list of items, showing the item name, stock, and which shop has it.</li>
+                        <li>All shops from the search results are plotted as pins on a Leaflet map.</li>
+                    </ol>
+                </li>
+                <li><strong>Product & Location Pages:</strong> Customers can click for details and then click "Locate Shop" to see a map with a route from their location to the shop.</li>
+            </ul>
+            
+            <h3>3. The Backend & Security Model (The "Brain")</h3>
+            <p>The entire app runs on a Supabase backend with a PostgreSQL database. The most important feature is our "Asymmetric" security:</p>
+            <ul>
+                <li><strong>Public Read:</strong> ANY guest or customer is allowed to <strong>READ (SELECT)</strong> all shop and item data. This is what makes the search work.</li>
+                <li><strong>Private Write:</strong> A user can <strong>ONLY WRITE (INSERT, UPDATE, DELETE)</strong> data if they are the logged-in owner of that specific shop. This keeps the owners' data safe from each other.</li>
+            </ul>
+        </section>
+    </main>
+</body>
+</html>

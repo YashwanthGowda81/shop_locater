@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Set Shop Location - ShopTrio</title>
+    <link rel="stylesheet" href="add_shop_location.css">
+    <link rel="stylesheet" href="../modal.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+</head>
+
+<body>
+    <header class="header">
+        <div class="container">
+            <h1 class="logo">Set Shop Location</h1>
+            <div class="header-actions">
+                <button id="current-location-btn" class="btn btn-outline">Use My Current Location</button>
+                <button id="save-location-btn" class="btn btn-primary">Save This Location</button>
+                <button id="back-btn" class="btn btn-outline">← Back</button>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="map-container">
+            <div id="map"></div>
+            <div class="map-instructions">
+                <p>📍 Drag the marker to set your shop's exact location</p>
+                <p class="coordinates" id="coordinates">Lat: 0.000000, Lng: 0.000000</p>
+            </div>
+        </div>
+    </main>
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p id="modal-message"></p>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script type="module" src="add_shop_location.js"></script>
+</body>
+
+</html>

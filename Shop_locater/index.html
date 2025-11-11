@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LocalShop - Find Products Near You Instantly</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <i class="fas fa-store"></i> LocalShop
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="#features">Features</a></li>
+                        <li><a href="overview.html">How It Works</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </nav>
+                <!-- <div class="auth-buttons">
+                    <a href="#" class="btn btn-outline">Log In</a>
+                    <a href="#" class="btn btn-primary">Sign Up</a>
+                </div> -->
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>Find Products Near You Instantly</h1>
+            <p>Connect with local shops and customers in your area. Discover products, promote your store, and grow your business with LocalShop.</p>
+        </div>
+    </section>
+
+    <section class="experience-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Choose Your Experience</h2>
+                <p>Whether you're looking to buy or sell, LocalShop has the perfect solution for you</p>
+            </div>
+            <div class="experience-cards">
+                <div class="experience-card" id="customer-card">
+                    <i class="fas fa-search"></i>
+                    <h3>Customer</h3>
+                    <p>Connect with customers in your area looking for products you offer.</p>
+
+                    <button class="card-btn" onclick="navigateToCustomer()">Enter as Customer</button>
+                </div>
+                <div class="experience-card" id="owner-card">
+                    <i class="fas fa-store-alt"></i>
+                    <h3>Shop Owner</h3>
+                    <p>List your store and reach more customers in your local community.</p>
+
+                    <button class="card-btn" onclick="navigateToOwner()">Enter as Owner</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="features-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Why Choose LocalShop?</h2>
+                <p>Our platform offers unique features designed to enhance your shopping and selling experience</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <i class="fas fa-search-location"></i>
+                    <h3>Smart Search</h3>
+                    <p>Start the search for products in your neighborhood with our intelligent location-based search.</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-map-marked-alt"></i>
+                    <h3>Easy Navigation</h3>
+                    <p>Navigate to stores easily with integrated maps and directions to find exactly what you need.</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-mobile-alt"></i>
+                    <h3>Mobile Friendly</h3>
+                    <p>Access LocalShop on any device with our responsive design that works perfectly everywhere.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="user-types">
+        <div class="container">
+            <div class="section-title">
+                <h3>We provide customized solutions for both customers and shop owners</h3>
+            </div>
+
+            <div class="user-tabs">
+                <div class="user-tab active" data-target="customer">For Customers</div>
+                <div class="user-tab" data-target="shop-owner">For Shop Owners</div>
+            </div>
+
+            <div class="user-content active" id="customer">
+                <div class="benefits-grid">
+                    <div class="benefit-item">
+                        <h4><i class="fas fa-bolt"></i> Instant Products</h4>
+                        <p>Find products available in local stores near you with real-time inventory updates.</p>
+                    </div>
+                    <div class="benefit-item">
+                        <h4><i class="fas fa-store"></i> Nearby Shops</h4>
+                        <p>Discover local shops in your area and support small businesses in your community.</p>
+                    </div>
+                    <div class="benefit-item">
+                        <h4><i class="fas fa-route"></i> Easy Navigation</h4>
+                        <p>Get turn-by-turn directions to stores with integrated maps and location services.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="user-content" id="shop-owner">
+                <div class="benefits-grid">
+                    <div class="benefit-item">
+                        <h4><i class="fas fa-user-plus"></i> Create Shop Account</h4>
+                        <p>Set up your store profile in minutes and start reaching local customers immediately.</p>
+                    </div>
+                    <div class="benefit-item">
+                        <h4><i class="fas fa-boxes"></i> Add Inventory</h4>
+                        <p>Easily manage your product catalog with our simple inventory management system.</p>
+                    </div>
+                    <div class="benefit-item">
+                        <h4><i class="fas fa-chart-line"></i> Track & Grow</h4>
+                        <p>Monitor your store performance and get insights to help grow your business.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>LocalShop</h3>
+                    <p>Connecting local businesses with customers in their community.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Features</a></li>
+                        <li><a href="#">How It Works</a></li>
+                        <li><a href="#">Pricing</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Support</h3>
+                    <ul>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Contact Us</h3>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> bengaluru rrce college</li>
+                        <li><i class="fas fa-phone"></i> 9972308659</li>
+                        <li><i class="fas fa-envelope"></i> yashwanth812005@gmail.com</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 LocalShop. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

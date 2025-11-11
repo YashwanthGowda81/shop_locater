@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Item - ShopTrio</title>
+    <link rel="stylesheet" href="create-item.css">
+    <link rel="stylesheet" href="../modal.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header class="header">
+        <div class="container">
+            <h1 class="logo">Create New Item</h1>
+            <button id="back-btn" class="btn btn-outline">← Back</button>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="container">
+            <div class="form-container">
+                <form id="item-form" class="item-form">
+                    <div class="form-group">
+                        <label for="item_name">Item Name *</label>
+                        <input type="text" id="item_name" name="item_name" required>
+                    </div>
+
+                    <div class="quantity-group">
+                        <div class="form-group">
+                            <label for="units">Quantity *</label>
+                            <input type="number" id="units" name="units" step="0.01" min="0" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="unit_type">Unit Type *</label>
+                            <select id="unit_type" name="unit_type" required>
+                                <option value="">Select unit type</option>
+                                <option value="kg">Kilograms (kg)</option>
+                                <option value="g">Grams (g)</option>
+                                <option value="L">Liters (L)</option>
+                                <option value="ml">Milliliters (ml)</option>
+                                <option value="units">Units</option>
+                                <option value="packs">Packs</option>
+                                <option value="boxes">Boxes</option>
+                                <option value="bottles">Bottles</option>
+                                <option value="bags">Bags</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="description">Description</label>
+                        <textarea id="description" name="description" rows="4" placeholder="Describe your item..."></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="photo">Item Photo</label>
+                        <input type="file" id="photo" name="photo" accept="image/*">
+                        <div class="file-hint">Supported formats: JPG, PNG, WebP. Max size: 5MB</div>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="submit" class="btn btn-primary">Create Item</button>
+                        <button type="button" id="cancel-btn" class="btn btn-outline">Cancel</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p id="modal-message"></p>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script type="module" src="create-item.js"></script>
+</body>
+
+</html>

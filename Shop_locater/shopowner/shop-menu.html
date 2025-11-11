@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop Menu - ShopTrio</title>
+    <link rel="stylesheet" href="shop-menu.css">
+    <link rel="stylesheet" href="../modal.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header class="header">
+        <div class="container">
+            <h1 class="logo" id="shop-name-header">Shop Menu</h1>
+            <button id="back-to-home-btn" class="btn btn-outline">← Back to Shops</button>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="container">
+            <div class="shop-info">
+                <h2 id="current-shop-name">Shop Management</h2>
+                <p id="shop-phone-display">Manage your shop operations</p>
+            </div>
+
+            <div class="menu-grid">
+                <div class="menu-card" id="dashboard-btn">
+                    <div class="menu-icon">📊</div>
+                    <h3>View Dashboard</h3>
+                    <p>Manage your items and inventory</p>
+                </div>
+
+                <div class="menu-card" id="edit-shop-btn">
+                    <div class="menu-icon">🏪</div>
+                    <h3>Edit Shop Details</h3>
+                    <p>Update shop information and location</p>
+                </div>
+
+                <div class="menu-card" id="create-btn">
+                    <div class="menu-icon">➕</div>
+                    <h3>Create a New Item</h3>
+                    <p>Add new products to your inventory</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p id="modal-message"></p>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script type="module" src="shop-menu.js"></script>
+</body>
+
+</html>

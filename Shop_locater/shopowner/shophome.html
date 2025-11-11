@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Shops - ShopTrio</title>
+    <link rel="stylesheet" href="shophome.css">
+    <link rel="stylesheet" href="../modal.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header class="header">
+        <div class="container">
+            <h1 class="logo">My Shops</h1>
+            <div class="header-actions">
+                <button id="my-account-btn" class="btn btn-outline">My Account</button>
+                <button id="logout-btn" class="btn btn-outline">Logout</button>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="container">
+            <div class="page-header">
+                <h2>Your Business Locations</h2>
+                <button id="add-shop-btn" class="btn btn-primary">+ Add New Shop</button>
+            </div>
+
+            <div id="shops-container" class="shops-grid">
+                <!-- Shops will be loaded here -->
+            </div>
+
+            <div id="no-shops" class="no-shops" style="display: none;">
+                <div class="no-shops-content">
+                    <div class="no-shops-icon">🏪</div>
+                    <h3>No Shops Yet</h3>
+                    <p>Get started by adding your first shop location</p>
+                    <button id="first-shop-btn" class="btn btn-primary">Add Your First Shop</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p id="modal-message"></p>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script type="module" src="shophome.js"></script>
+</body>
+
+</html>

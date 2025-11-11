@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details - LocalShop</title>
+    <link rel="stylesheet" href="product.css">
+    <link rel="stylesheet" href="../modal.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header class="header">
+        <div class="container">
+            <button id="back-to-dashboard-btn" class="back-btn">← Back to Dashboard</button>
+            <h1 class="logo">LocalShop</h1>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="container">
+            <div class="product-details">
+                <div class="product-image-container">
+                    <img id="product-image" src="" alt="Product Image" class="product-image">
+                    <div class="image-placeholder" id="image-placeholder">No Image</div>
+                </div>
+
+                <div class="product-info">
+                    <h1 id="product-name" class="product-name"></h1>
+                    <div class="shop-info">
+                        <h3 id="shop-name" class="shop-name"></h3>
+                        <p class="contact-info" id="shop-phone"></p>
+                    </div>
+
+                    <div class="stock-info">
+                        <span class="stock-label">In Stock:</span>
+                        <span id="product-stock" class="stock-amount"></span>
+                    </div>
+
+                    <div class="description-section">
+                        <h3>Description</h3>
+                        <p id="product-description" class="product-description">No description available.</p>
+                    </div>
+
+                    <div class="action-buttons">
+                        <button id="locate-shop-btn" class="btn btn-primary">Locate Shop</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p id="modal-message"></p>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script type="module" src="product.js"></script>
+</body>
+
+</html>

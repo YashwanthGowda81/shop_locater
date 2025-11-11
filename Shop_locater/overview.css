@@ -1,0 +1,65 @@
+/* === STYLES FOR overview.html === */
+
+/* Use the customer theme's colors */
+:root {
+    --primary-color: #2a9d8f;
+    --primary-hover: #217a70;
+    --background-color: #f8f9fa;
+    --surface-color: #ffffff;
+    --text-color: #212529;
+    --text-light: #6c757d;
+    --border-color: #dee2e6;
+    --border-radius: 12px;
+    --shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+.header {
+    justify-content: flex-start; /* Align header items to the left */
+    gap: 1.5rem;
+}
+
+.header h1 {
+    font-size: 1.5rem;
+}
+
+.nav-link {
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.overview-card {
+    background: var(--surface-color);
+    border-radius: var(--border-radius);
+    padding: 2rem 3rem;
+    box-shadow: var(--shadow);
+}
+
+.overview-card h2 {
+    font-size: 1.8rem;
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--border-color);
+    padding-bottom: 0.5rem;
+    margin-top: 0;
+}
+
+.overview-card h3 {
+    font-size: 1.4rem;
+    color: var(--text-color);
+    margin-top: 2rem;
+}
+
+.overview-card p, .overview-card li {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: var(--text-light);
+}
+
+.overview-card ul, .overview-card ol {
+    padding-left: 2rem;
+}
+
+.overview-card li {
+    margin-bottom: 0.75rem;
+}

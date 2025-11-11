@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Shop - ShopTrio</title>
+    <link rel="stylesheet" href="manage-shop.css">
+    <link rel="stylesheet" href="../modal.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header class="header">
+        <div class="container">
+            <h1 class="logo" id="page-title">Manage Shop</h1>
+            <button id="back-btn" class="btn btn-outline">← Back</button>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="container">
+            <div class="form-container">
+                <form id="shop-form" class="shop-form">
+                    <div class="form-group">
+                        <label for="shop_name">Shop Name *</label>
+                        <input type="text" id="shop_name" name="shop_name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone_number">Phone Number</label>
+                        <input type="tel" id="phone_number" name="phone_number">
+                    </div>
+
+                    <div class="location-section">
+                        <h3>Shop Location</h3>
+                        <div id="location-status" class="location-status">
+                            <span class="status-icon">📍</span>
+                            <span class="status-text">Location not set</span>
+                        </div>
+                        <button type="button" id="set-location-btn" class="btn btn-outline location-btn">
+                            Set Location on Map
+                        </button>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="submit" id="save-btn" class="btn btn-primary">Save Shop</button>
+                        <button type="button" id="delete-shop-btn" class="btn btn-danger" style="display: none;">
+                            Delete Shop
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p id="modal-message"></p>
+            <div id="modal-actions" class="modal-actions" style="display: none;">
+                <button id="confirm-delete" class="btn btn-danger">Yes, Delete</button>
+                <button id="cancel-delete" class="btn btn-outline">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script type="module" src="manage-shop.js"></script>
+</body>
+
+</html>

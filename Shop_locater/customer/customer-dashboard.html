@@ -1,0 +1,162 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShopTrio - Find Products</title>
+    <link rel="stylesheet" href="customer-dashboard.css">
+    <link rel="stylesheet" href="../modal.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <h1 class="logo">ShopTrio</h1>
+            <div class="auth-buttons">
+                <button id="login-btn" class="btn btn-outline">Login</button>
+                <button id="logout-btn" class="btn btn-outline">Logout</button>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="search-section">
+            <div class="container">
+                <form id="search-form" class="search-form">
+                    <input type="text" id="search-input" placeholder="Search for products..." class="search-input">
+                    <button type="submit" class="search-btn">Search</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="results-section">
+            <div class="container">
+              
+                <div class="section-header">
+                    <h2>📍 Items Near You</h2>
+                    <button id="refresh-location-btn" class="btn btn-sm">Refresh Location</button>
+                </div>
+                <div id="nearby-items" class="items-grid">
+                  
+                </div>
+
+               
+                <div class="section-header" id="search-results-header" style="display: none;">
+                    <h2>🔍 Search Results</h2>
+                    <span id="results-count" class="results-count"></span>
+                </div>
+                <div id="search-results" class="items-grid">
+                
+                </div>
+
+         
+                <div class="section-header" id="recently-viewed-header">
+                    <h2>🕒 Recently Viewed</h2>
+                </div>
+                <div id="recently-viewed" class="items-grid">
+          
+                </div>
+
+              
+                <div id="no-results" class="no-results" style="display: none;">
+                    <div class="no-results-content">
+                        <div class="no-results-icon">🔍</div>
+                        <h3>No items found</h3>
+                        <p>Try adjusting your search terms or browse nearby items</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p id="modal-message"></p>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="customer-dashboard.js"></script>
+</body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LocalShop - Find Products</title>
+    <link rel="stylesheet" href="customer-dashboard.css">
+    <link rel="stylesheet" href="../modal.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header class="header">
+        <div class="container">
+            <h1 class="logo">LocalShop</h1>
+            <div class="auth-buttons">
+                <button id="login-btn" class="btn btn-outline">Login</button>
+                <button id="logout-btn" class="btn btn-outline">Logout</button>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="search-section">
+            <div class="container">
+                <form id="search-form" class="search-form">
+                    <input type="text" id="search-input" placeholder="Search for products..." class="search-input">
+                    <button type="submit" class="search-btn">Search</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="results-section">
+            <div class="container">
+                <div class="section-header" id="search-results-header" style="display: none;">
+                    <h2>🔍 Search Results</h2>
+                    <span id="results-count" class="results-count"></span>
+                </div>
+                <div id="search-results" class="items-grid">
+                </div>
+
+                <div class="section-header">
+                    <h2>📍 Items Near You</h2>
+                    <button id="refresh-location-btn" class="btn btn-sm">Refresh Location</button>
+                </div>
+                <div id="nearby-items" class="items-grid">
+                </div>
+
+                <div class="section-header" id="recently-viewed-header">
+                    <h2>🕒 Recently Viewed</h2>
+                </div>
+                <div id="recently-viewed" class="items-grid">
+                </div>
+
+                <div id="no-results" class="no-results" style="display: none;">
+                    <div class="no-results-content">
+                        <div class="no-results-icon">🔍</div>
+                        <h3>No items found</h3>
+                        <p>Try adjusting your search terms or browse nearby items</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p id="modal-message"></p>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script type="module" src="customer-dashboard.js"></script>
+</body>
+
+</html>

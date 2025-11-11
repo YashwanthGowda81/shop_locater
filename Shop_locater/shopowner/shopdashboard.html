@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop Dashboard - ShopTrio</title>
+    <link rel="stylesheet" href="shopdashboard.css">
+    <link rel="stylesheet" href="../modal.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header class="header">
+        <div class="container">
+            <h1 class="logo" id="shop-name-header">Shop Dashboard</h1>
+            <div class="header-actions">
+                <button id="back-to-menu-btn" class="btn btn-outline">← Back to Menu</button>
+                <button id="edit-shop-btn" class="btn btn-outline">Edit Shop</button>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="container">
+            <div class="dashboard-header">
+                <h2>Inventory Management</h2>
+                <button id="add-item-btn" class="btn btn-primary">+ Add New Item</button>
+            </div>
+
+            <div class="stats-cards">
+                <div class="stat-card">
+                    <div class="stat-value" id="total-items">0</div>
+                    <div class="stat-label">Total Items</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value" id="in-stock-items">0</div>
+                    <div class="stat-label">In Stock</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value" id="low-stock-items">0</div>
+                    <div class="stat-label">Low Stock</div>
+                </div>
+            </div>
+
+            <div class="items-table-container">
+                <table class="items-table">
+                    <thead>
+                        <tr>
+                            <th>Item Name</th>
+                            <th>Stock</th>
+                            <th>Unit</th>
+                            <th>Description</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="items-table-body">
+                        <!-- Items will be loaded here -->
+                    </tbody>
+                </table>
+            </div>
+
+            <div id="no-items" class="no-items" style="display: none;">
+                <div class="no-items-content">
+                    <div class="no-items-icon">📦</div>
+                    <h3>No Items Yet</h3>
+                    <p>Start by adding your first item to the inventory</p>
+                    <button id="first-item-btn" class="btn btn-primary">Add Your First Item</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p id="modal-message"></p>
+            <div class="modal-input" style="display: none; margin-top: 1rem;">
+                <input type="number" id="edit-units-input" placeholder="Enter new quantity">
+                <select id="edit-unit-type-select" style="margin-top: 0.5rem; width: 100%; padding: 0.5rem;">
+                    <option value="kg">Kilograms (kg)</option>
+                    <option value="g">Grams (g)</option>
+                    <option value="L">Liters (L)</option>
+                    <option value="ml">Milliliters (ml)</option>
+                    <option value="units">Units</option>
+                    <option value="packs">Packs</option>
+                    <option value="boxes">Boxes</option>
+                    <option value="bottles">Bottles</option>
+                    <option value="bags">Bags</option>
+                </select>
+            </div>
+            <div class="modal-actions" style="display: none; margin-top: 1rem;">
+                <button id="confirm-edit" class="btn btn-primary">Save</button>
+                <button id="cancel-edit" class="btn btn-outline">Cancel</button>
+            </div>
+            <div class="modal-actions-delete" style="display: none; margin-top: 1rem;">
+                <button id="confirm-delete" class="btn btn-danger">Yes, Delete</button>
+                <button id="cancel-delete" class="btn btn-outline">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script type="module" src="shopdashboard.js"></script>
+</body>
+
+</html>
